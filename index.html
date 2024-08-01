@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cont" id="app">
+        <h1>{{title}}</h1>
+        <p class="content"> {{getContent}} </p>
+        <div class="navigation">
+            <div class="navigationItem" v-for="(text, key) in navigation">
+                <p :class="['key', checkStatus(key)]">{{key}}</p>
+                <p class="text">{{text}}</p>
+            </div>
+        </div>
+        <button class="back" disabled="" @click="changeCount">{{checkButtonContent}}</button>
+        <button class="next" @click="navCount++" v-if="navCount != 5">{{next}}</button>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
