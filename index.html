@@ -16,7 +16,7 @@
                 <p class="text">{{text}}</p>
             </div>
         </div>
-        <button class="back" disabled="" @click="changeCount">{{checkButtonContent}}</button>
+        <button class="back" disabled="" @click="changeCount" ref="backButton">{{checkButtonContent}}</button>
         <button class="next" @click="navCount++" v-if="navCount != 5">{{next}}</button>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

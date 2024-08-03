@@ -54,12 +54,11 @@ const App = {
     },
     watch: {
         navCount(value){
-            let btn = document.querySelector(".back");
             if(value == 1){
-                btn.setAttribute("disabled","")
+                this.$refs.backButton.setAttribute("disabled","")
             }
             else{
-                btn.removeAttribute("disabled");
+                this.$refs.backButton.removeAttribute("disabled");
             }
         }
     }
